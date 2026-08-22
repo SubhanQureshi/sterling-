@@ -1,0 +1,19 @@
+// ==========================================
+// STERLING DESIGN SYSTEM - STRICT VARIABLES
+// ==========================================
+
+// Color Palette (Strictly 5 Colors: Coral, Black, Stone, Paper + White)
+$color-coral: #F95C4B;
+$color-black: #000000;
+$color-black-80:#313130;
+$color-black-60:#626262;
+$color-stone: #E4DED2;
+$color-paper: #F6F4F1;
+$color-white: #FFFFFF;
+
+// Typography Token (Space Grotesk)
+$font-family-space-grotesk: var(--font-space-grotesk), 'Space Grotesk', sans-serif;
+
+// Button Radius & Transitions
+$border-radius-button: 8px;
+$transition-default: all 0.25s cubic-bezier(0.4, 0, 0.2, 1);

@@ -1,0 +1,43 @@
+{
+  "name": "sterling",
+  "version": "0.1.0",
+  "private": true,
+  "scripts": {
+    "dev": "next dev",
+    "build": "next build",
+    "start": "next start",
+    "lint": "next lint",
+    "storybook": "storybook dev -p 6006",
+    "build-storybook": "storybook build"
+  },
+  "dependencies": {
+    "@ant-design/icons": "^5.4.0",
+    "@emailjs/browser": "^4.4.1",
+    "next": "^14.2.5",
+    "react": "^18.3.1",
+    "react-dom": "^18.3.1",
+    "sass": "^1.77.8"
+  },
+  "devDependencies": {
+    "@chromatic-com/storybook": "^1.6.1",
+    "@storybook/addon-essentials": "^8.6.18",
+    "@storybook/addon-interactions": "^8.6.18",
+    "@storybook/addon-links": "^8.6.18",
+    "@storybook/addon-onboarding": "^8.6.18",
+    "@storybook/blocks": "^8.6.18",
+    "@storybook/nextjs": "^8.6.18",
+    "@storybook/react": "^8.6.18",
+    "@storybook/test": "^8.6.18",
+    "@types/node": "^20.14.12",
+    "@types/react": "^18.3.3",
+    "@types/react-dom": "^18.3.0",
+    "eslint": "^8.57.0",
+    "eslint-config-next": "^14.2.5",
+    "storybook": "^8.6.18",
+    "typescript": "^5.5.4",
+    "webpack": "5.92.0"
+  },
+  "overrides": {
+    "webpack": "5.92.0"
+  }
+}

@@ -1,0 +1,48 @@
+@import '../../styles/variables';
+@import '../../styles/mixins';
+
+.button {
+  font-family: $font-family-space-grotesk;
+  font-weight: 500;
+  font-size: 0.875rem;
+  padding: 0.875rem 1.75rem;
+  border-radius: $border-radius-button;
+  cursor: pointer;
+  transition: $transition-default;
+  border: 1px solid transparent;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  white-space: nowrap;
+  user-select: none;
+  @include focus-ring;
+
+  // Primary Variant: Coral Fill, White Text
+  &.primary {
+    background-color: $color-coral;
+    color: $color-white;
+
+    &:hover {
+      background-color: $color-black;
+      color: $color-white;
+    }
+  }
+
+  // Secondary Variant: White Fill, Black Border & Text
+  &.secondary {
+    background-color: $color-white;
+    color: $color-black;
+    border-color: $color-black;
+
+    &:hover {
+      background-color: $color-black;
+      color: $color-white;
+    }
+  }
+
+  // Explicit Hover State Variant (as depicted in design spec)
+  &.hoverState {
+    background-color: $color-black;
+    color: $color-white;
+  }
+}

@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <title>New Website Inquiry - Sterling Technical Group</title>
+  <style type="text/css">
+    body, table, td, a { -webkit-text-size-adjust: 100%; -ms-text-size-adjust: 100%; }
+    table, td { mso-table-lspace: 0pt; mso-table-rspace: 0pt; }
+    img { -ms-interpolation-mode: bicubic; border: 0; height: auto; line-height: 100%; outline: none; text-decoration: none; }
+    table { border-collapse: collapse !important; }
+    body { height: 100% !important; margin: 0 !important; padding: 0 !important; width: 100% !important; background-color: #F6F4F1; font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif; color: #111111; }
+
+    @media only screen and (max-width: 480px) {
+      .email-container {
+        width: 100% !important;
+        max-width: 100% !important;
+        margin: 0 auto !important;
+        border-radius: 0 !important;
+      }
+      .email-header { padding: 20px 16px !important; }
+      .email-header h1 { font-size: 16px !important; }
+      .email-body { padding: 20px 14px !important; }
+      .email-title { font-size: 18px !important; }
+      .info-table td {
+        display: block !important;
+        width: 100% !important;
+        box-sizing: border-box !important;
+        padding: 6px 10px !important;
+      }
+      .info-label { width: 100% !important; color: #666666 !important; font-size: 12px !important; }
+      .message-box { padding: 12px 14px !important; font-size: 13px !important; }
+      .email-footer { padding: 16px 14px !important; font-size: 11px !important; }
+    }
+  </style>
+</head>
+<body style="margin: 0; padding: 0; background-color: #F6F4F1;">
+  <table border="0" cellpadding="0" cellspacing="0" width="100%" style="background-color: #F6F4F1; table-layout: fixed;">
+    <tr>
+      <td align="center" style="padding: 15px 5px;">
+        <table border="0" cellpadding="0" cellspacing="0" width="100%" class="email-container" style="max-width: 600px; background-color: #FFFFFF; border-radius: 8px; overflow: hidden; border: 1px solid #E8E4DC;">
+          
+          <!-- Coral Header Banner with White Sterling Logo -->
+          <tr>
+            <td class="email-header" style="background-color: #F95C4B; padding: 24px 32px; border-bottom: 3px solid #000000;">
+              <h1 style="color: #FFFFFF; font-size: 20px; font-weight: 700; letter-spacing: 2px; margin: 0; text-transform: uppercase;">
+                Sterling <span style="color: #000000;">Technical Group</span>
+              </h1>
+            </td>
+          </tr>
+
+          <!-- Main Content -->
+          <tr>
+            <td class="email-body" style="padding: 36px 32px;">
+              <h2 class="email-title" style="font-size: 22px; font-weight: 700; color: #000000; margin-top: 0; margin-bottom: 8px;">New Project Inquiry</h2>
+              <p style="font-size: 14px; color: #555555; margin-bottom: 24px; line-height: 1.5;">A client submitted a project request through the Sterling website contact form.</p>
+
+              <!-- Info Table -->
+              <table border="0" cellpadding="0" cellspacing="0" width="100%" class="info-table" style="background-color: #F6F4F1; border-radius: 6px; margin-bottom: 24px; width: 100%;">
+                <tr>
+                  <td class="info-label" style="padding: 12px 16px; font-weight: 700; color: #313130; width: 130px; border-bottom: 1px solid #E4DED2;">Full Name:</td>
+                  <td style="padding: 12px 16px; color: #111111; border-bottom: 1px solid #E4DED2;"><strong>{{from_name}}</strong></td>
+                </tr>
+                <tr>
+                  <td class="info-label" style="padding: 12px 16px; font-weight: 700; color: #313130; border-bottom: 1px solid #E4DED2;">Company:</td>
+                  <td style="padding: 12px 16px; color: #111111; border-bottom: 1px solid #E4DED2;">{{company}}</td>
+                </tr>
+                <tr>
+                  <td class="info-label" style="padding: 12px 16px; font-weight: 700; color: #313130; border-bottom: 1px solid #E4DED2;">Email:</td>
+                  <td style="padding: 12px 16px; color: #F95C4B; border-bottom: 1px solid #E4DED2; word-break: break-all;"><a href="mailto:{{from_email}}" style="color: #F95C4B; text-decoration: none;">{{from_email}}</a></td>
+                </tr>
+                <tr>
+                  <td class="info-label" style="padding: 12px 16px; font-weight: 700; color: #313130; border-bottom: 1px solid #E4DED2;">Phone:</td>
+                  <td style="padding: 12px 16px; color: #111111; border-bottom: 1px solid #E4DED2;">{{phone}}</td>
+                </tr>
+                <tr>
+                  <td class="info-label" style="padding: 12px 16px; font-weight: 700; color: #313130;">Project Type:</td>
+                  <td style="padding: 12px 16px; color: #111111;"><strong>{{project_type}}</strong></td>
+                </tr>
+              </table>
+
+              <!-- Message Details -->
+              <div style="font-weight: 700; font-size: 12px; color: #313130; margin-bottom: 8px; text-transform: uppercase; letter-spacing: 0.5px;">Message / Details:</div>
+              <div class="message-box" style="background-color: #F6F4F1; border-left: 3px solid #F95C4B; padding: 16px 20px; font-size: 14px; line-height: 1.6; color: #313130; word-break: break-word;">
+                {{message}}
+              </div>
+            </td>
+          </tr>
+
+          <!-- Footer -->
+          <tr>
+            <td class="email-footer" style="background-color: #000000; padding: 18px 32px; text-align: center; font-size: 11px; color: #FFFFFF; letter-spacing: 1px; font-weight: 600;">
+              &copy; 2026 STERLING TECHNICAL GROUP
+            </td>
+          </tr>
+        </table>
+      </td>
+    </tr>
+  </table>
+</body>
+</html>

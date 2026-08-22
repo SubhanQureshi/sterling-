@@ -1,0 +1,119 @@
+@import '../../design-system/styles/variables';
+@import '../../design-system/styles/mixins';
+
+.visionWrapper {
+  width: 100%;
+  min-height: calc(100vh - 7rem); /* Full screen viewport height below header */
+  scroll-margin-top: 7rem; /* Offset for fixed sticky header height */
+  background-color: $color-paper;
+  border-bottom: 0.0625rem solid $color-black-60; /* Separation line between Vision & Projects */
+  padding: 4rem 0;
+  box-sizing: border-box;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  @media (max-width: 48rem) {
+    min-height: auto;
+    padding: 3rem 0;
+  }
+}
+
+.container {
+  width: 100%;
+  max-width: 120rem; /* 1920px */
+  margin: 0 auto;
+  padding: 0 3.75rem;
+  box-sizing: border-box;
+
+  @media (min-width: 120rem) {
+    padding: 0 15rem; /* 240px padding matching header at 1920px */
+  }
+
+  @media (max-width: 48rem) {
+    padding: 0 1.25rem;
+  }
+}
+
+.title {
+  font-family: $font-family-space-grotesk;
+  font-size: 2.75rem; /* 44px */
+  font-weight: 700;
+  color: $color-coral;
+  text-align: center;
+  margin-bottom: 4.5rem;
+  letter-spacing: -0.01em;
+
+  @media (max-width: 48rem) {
+    font-size: 2.25rem;
+    margin-bottom: 2.5rem;
+  }
+}
+
+.gridWrapper {
+  width: 100%;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  box-sizing: border-box;
+  border-top: 0.0625rem solid $color-black-60;
+
+  @media (max-width: 60rem) {
+    grid-template-columns: 1fr;
+  }
+}
+
+.card {
+  padding: 2rem 2.25rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  gap: 1.25rem;
+  border-right: 0.0625rem solid $color-black-60;
+  box-sizing: border-box;
+  transition: background-color 0.25s ease;
+
+  &:last-child {
+    border-right: none;
+  }
+
+  @media (max-width: 60rem) {
+    padding: 2.25rem 1rem;
+    border-right: none;
+    border-bottom: 0.0625rem solid $color-black-60;
+
+    &:last-child {
+      border-bottom-color: $color-black-60;
+    }
+  }
+}
+
+.icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.875rem;
+  color: $color-coral;
+  margin-bottom: 0.5rem;
+
+  span, svg {
+    color: $color-coral;
+    font-size: 1.875rem;
+  }
+}
+
+.cardTitle {
+  font-family: $font-family-space-grotesk;
+  font-size: 1.25rem; /* 20px */
+  font-weight: 700;
+  color: $color-black;
+  line-height: 1.3;
+}
+
+.cardDescription {
+  font-family: $font-family-space-grotesk;
+  font-size: 0.875rem; /* 14px */
+  line-height: 1.65;
+  color: $color-black-80;
+  max-width: 18rem;
+}

@@ -1,0 +1,42 @@
+@import './variables';
+
+// Flexbox Center Helper
+@mixin flex-center {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+// Flexbox Between Helper
+@mixin flex-between {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+// Responsive Breakpoints
+@mixin mobile {
+  @media (max-width: 639px) {
+    @content;
+  }
+}
+
+@mixin tablet {
+  @media (min-width: 640px) and (max-width: 1023px) {
+    @content;
+  }
+}
+
+@mixin desktop {
+  @media (min-width: 1024px) {
+    @content;
+  }
+}
+
+// Focus Visible Ring
+@mixin focus-ring {
+  outline: none;
+  &:focus-visible {
+    box-shadow: 0 0 0 3px rgba($color-coral, 0.4);
+  }
+}

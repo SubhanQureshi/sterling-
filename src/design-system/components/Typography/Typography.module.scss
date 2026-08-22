@@ -1,0 +1,75 @@
+@import '../../styles/variables';
+
+.typography {
+  font-family: $font-family-space-grotesk;
+  margin: 0;
+  line-height: 1.2;
+
+  // Variants
+  &.h1 {
+    font-size: 3rem;
+    letter-spacing: -0.02em;
+  }
+
+  &.h2 {
+    font-size: 2.25rem;
+    letter-spacing: -0.015em;
+  }
+
+  &.h3 {
+    font-size: 1.875rem;
+    letter-spacing: -0.01em;
+  }
+
+  &.h4 {
+    font-size: 1.5rem;
+  }
+
+  &.body {
+    font-size: 1rem;
+    line-height: 1.6;
+  }
+
+  &.caption {
+    font-size: 0.875rem;
+    line-height: 1.4;
+  }
+
+  // Weights
+  &.regular {
+    font-weight: 400;
+  }
+
+  &.medium {
+    font-weight: 500;
+  }
+
+  &.semibold {
+    font-weight: 600;
+  }
+
+  &.bold {
+    font-weight: 700;
+  }
+
+  // Colors
+  &.color-black {
+    color: $color-black;
+  }
+
+  &.color-coral {
+    color: $color-coral;
+  }
+
+  &.color-stone {
+    color: $color-stone;
+  }
+
+  &.color-paper {
+    color: $color-paper;
+  }
+
+  &.color-white {
+    color: $color-white;
+  }
+}

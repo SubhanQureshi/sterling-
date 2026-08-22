@@ -1,0 +1,318 @@
+@import '../../design-system/styles/variables';
+@import '../../design-system/styles/mixins';
+
+.contactWrapper {
+  width: 100%;
+  min-height: calc(100vh - 7rem); /* Full screen viewport height below header */
+  scroll-margin-top: 7rem; /* Offset for fixed sticky header height */
+  background-color: $color-paper;
+  padding: 5rem 0;
+  box-sizing: border-box;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.container {
+  width: 100%;
+  max-width: 120rem; /* 1920px */
+  margin: 0 auto;
+  padding: 0 3.75rem;
+  display: flex;
+  align-items: flex-start; /* Aligns left headline top edge 1:1 with form card top edge */
+  justify-content: space-between;
+  gap: 4rem;
+  box-sizing: border-box;
+
+  @media (min-width: 120rem) {
+    padding: 0 15rem; /* 240px padding matching header & hero at 1920px */
+  }
+
+  @media (max-width: 64rem) {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 3rem;
+    padding: 0 1.25rem;
+  }
+}
+
+.leftColumn {
+  flex: 1;
+  max-width: 34rem;
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+  margin-top: 0;
+  padding-top: 0;
+}
+
+.headline {
+  font-family: $font-family-space-grotesk;
+  font-size: 3.25rem; /* 52px */
+  font-weight: 700;
+  line-height: 1.15;
+  color: $color-black;
+  letter-spacing: -0.02em;
+  margin-top: 0;
+  padding-top: 0;
+
+  @media (max-width: 48rem) {
+    font-size: 2.5rem;
+  }
+}
+
+.coralText {
+  color: $color-coral;
+}
+
+.subheadline {
+  font-family: $font-family-space-grotesk;
+  font-size: 1rem; /* 16px */
+  line-height: 1.6;
+  color: $color-black-80;
+  max-width: 28rem;
+}
+
+.noticeBox {
+  display: flex;
+  align-items: stretch;
+  gap: 1rem;
+  margin-top: 2rem;
+}
+
+.noticeLine {
+  width: 0.125rem; /* 2px */
+  background-color: $color-coral;
+  flex-shrink: 0;
+}
+
+.noticeText {
+  font-family: $font-family-space-grotesk;
+  font-size: 0.875rem; /* 14px */
+  line-height: 1.6;
+  color: $color-black-80;
+  max-width: 24rem;
+}
+
+.rightColumn {
+  flex: 1;
+  max-width: 38rem;
+  width: 100%;
+}
+
+.formCard {
+  background-color: $color-stone; /* #E4DED2 */
+  border-radius: 0.5rem; /* 8px */
+  padding: 3rem 2.75rem;
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  box-sizing: border-box;
+
+  @media (max-width: 30rem) {
+    padding: 2rem 1.5rem;
+  }
+}
+
+.formRow {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 1.75rem;
+
+  @media (max-width: 30rem) {
+    grid-template-columns: 1fr;
+  }
+}
+
+.fieldGroup {
+  display: flex;
+  flex-direction: column;
+  gap: 0.35rem;
+  position: relative;
+}
+
+.fieldLabel {
+  font-family: $font-family-space-grotesk;
+  font-size: 0.75rem; /* 12px */
+  font-weight: 600;
+  color: $color-black-80;
+  margin-bottom: 0.125rem;
+}
+
+.inputField, .textareaField {
+  width: 100%;
+  background: transparent;
+  border: none;
+  border-bottom: 0.0625rem solid rgba(0, 0, 0, 0.25);
+  padding: 0.5rem 0;
+  font-family: $font-family-space-grotesk;
+  font-size: 0.875rem; /* 14px */
+  color: $color-black;
+  font-weight: 500;
+  outline: none;
+  transition: border-color 0.2s ease;
+
+  &::placeholder {
+    color: $color-black-60;
+    font-weight: 500;
+  }
+
+  &:hover,
+  &:focus {
+    border-bottom-color: $color-coral;
+  }
+
+  &.hasError {
+    border-bottom-color: $color-coral !important;
+  }
+}
+
+.selectWrapper {
+  position: relative;
+  width: 100%;
+}
+
+.customSelectTrigger {
+  width: 100%;
+  background: transparent;
+  border: none;
+  border-bottom: 0.0625rem solid $color-black-60;
+  padding: 0.5rem 0;
+  font-family: $font-family-space-grotesk;
+  font-size: 0.875rem; /* 14px */
+  color: $color-black;
+  font-weight: 500;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  cursor: pointer;
+  transition: border-color 0.2s ease;
+
+  &:hover,
+  &.isOpen {
+    border-bottom-color: $color-coral;
+
+    .selectArrow {
+      color: $color-coral;
+    }
+  }
+
+  &.hasError {
+    border-bottom-color: $color-coral !important;
+  }
+}
+
+.selectArrow {
+  font-size: 0.75rem;
+  color: rgba(0, 0, 0, 0.6);
+  transition: transform 0.2s ease, color 0.2s ease;
+
+  &.isOpen {
+    transform: rotate(180deg);
+    color: $color-coral;
+  }
+}
+
+.customDropdownMenu {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  width: 100%;
+  background-color: $color-white;
+  border-radius: 0.375rem;
+  box-shadow: 0 0.5rem 1.5rem rgba(0, 0, 0, 0.12);
+  margin-top: 0.25rem;
+  overflow: hidden;
+  z-index: 10;
+  display: flex;
+  flex-direction: column;
+}
+
+.customOption {
+  padding: 0.75rem 1rem;
+  font-family: $font-family-space-grotesk;
+  font-size: 0.875rem; /* 14px */
+  font-weight: 500;
+  color: $color-black;
+  background-color: $color-white;
+  cursor: pointer;
+  transition: background-color 0.15s ease, color 0.15s ease;
+
+  &:hover {
+    background-color: $color-coral;
+    color: $color-white;
+  }
+}
+
+.textareaField {
+  resize: vertical;
+  min-height: 4rem;
+}
+
+/* Hidden Honeypot Anti-Spam Field */
+.honeypotField {
+  display: none !important;
+  visibility: hidden !important;
+  opacity: 0 !important;
+  position: absolute !important;
+  left: -9999px !important;
+  height: 0 !important;
+  width: 0 !important;
+  pointer-events: none !important;
+}
+
+.errorMessage {
+  font-family: $font-family-space-grotesk;
+  font-size: 0.75rem; /* 12px */
+  color: $color-coral;
+  font-weight: 500;
+  margin-top: 0.25rem;
+}
+
+.statusBanner {
+  font-family: $font-family-space-grotesk;
+  font-size: 0.875rem;
+  font-weight: 600;
+  padding: 0.875rem 1.25rem;
+  border-radius: 0.375rem;
+  line-height: 1.5;
+
+  &.success {
+    background-color: rgba(40, 167, 69, 0.1);
+    color: #1e7e34;
+    border: 0.0625rem solid rgba(40, 167, 69, 0.3);
+  }
+
+  &.error {
+    background-color: rgba(249, 92, 75, 0.1);
+    color: $color-coral;
+    border: 0.0625rem solid rgba(249, 92, 75, 0.3);
+  }
+}
+
+.submitBtn {
+  width: 100%;
+  height: 3.25rem; /* 52px */
+  background-color: $color-coral;
+  color: $color-white;
+  border: none;
+  border-radius: $border-radius-button;
+  font-family: $font-family-space-grotesk;
+  font-size: 0.875rem; /* 14px */
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  cursor: pointer;
+  transition: $transition-default;
+  margin-top: 0.5rem;
+
+  &:hover:not(:disabled) {
+    background-color: $color-black;
+    color: $color-white;
+  }
+
+  &:disabled {
+    opacity: 0.7;
+    cursor: not-allowed;
+  }
+}

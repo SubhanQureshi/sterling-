@@ -1,0 +1,202 @@
+@import '../../design-system/styles/variables';
+@import '../../design-system/styles/mixins';
+
+.heroWrapper {
+  width: 100%;
+  min-height: calc(100vh - 7rem); /* Fills full viewport height minus top navbar height */
+  scroll-margin-top: 7rem; /* Offset for fixed sticky header height */
+  background-color: $color-paper;
+  position: relative;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  box-sizing: border-box;
+
+  @media (max-width: 48rem) {
+    min-height: auto;
+    padding: 2rem 0;
+  }
+}
+
+.container {
+  width: 100%;
+  max-width: 120rem; /* 1920px */
+  margin: 0 auto;
+  padding: 3.5rem 3.75rem 4rem 3.75rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  position: relative;
+  z-index: 2;
+  box-sizing: border-box;
+
+  @media (min-width: 120rem) {
+    padding: 3.5rem 15rem 4rem 15rem; /* 240px padding matching Header at 1920px */
+  }
+
+  @media (max-width: 48rem) {
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 2rem 1.25rem 3rem 1.25rem;
+    gap: 2rem;
+  }
+}
+
+.contentColumn {
+  max-width: 38rem;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  z-index: 3;
+  position: relative;
+
+  @media (max-width: 48rem) {
+    max-width: 100%;
+    width: 100%;
+  }
+}
+
+.eyebrow {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  margin-bottom: 0.25rem;
+}
+
+.eyebrowLine {
+  width: 2rem; /* 32px */
+  height: 0.125rem; /* 2px */
+  background-color: $color-coral;
+  display: inline-block;
+}
+
+.eyebrowText {
+  font-family: $font-family-space-grotesk;
+  font-size: 0.75rem; /* 12px */
+  font-weight: 600;
+  letter-spacing: 0.18em;
+  color: $color-black-80;
+  text-transform: uppercase;
+}
+
+.headline {
+  font-family: $font-family-space-grotesk;
+  font-size: 3.75rem; /* 60px */
+  font-weight: 700;
+  line-height: 1.1;
+  color: $color-black;
+  letter-spacing: -0.02em;
+  margin-bottom: 0.25rem;
+
+  @media (max-width: 48rem) {
+    font-size: 2.25rem;
+    line-height: 1.15;
+  }
+}
+
+.coralText {
+  color: $color-coral;
+}
+
+.description {
+  font-family: $font-family-space-grotesk;
+  font-size: 1rem; /* 16px */
+  line-height: 1.6;
+  color: $color-black-80;
+  max-width: 32rem;
+  margin-top: 0.25rem;
+
+  @media (max-width: 48rem) {
+    font-size: 0.9375rem;
+    max-width: 100%;
+  }
+}
+
+.buttonGroup {
+  display: flex;
+  align-items: center;
+  gap: 1.25rem;
+  margin-top: 0.75rem;
+
+  @media (max-width: 48rem) {
+    flex-direction: column;
+    width: 100%;
+    gap: 1rem;
+
+    button {
+      width: 100%;
+    }
+  }
+}
+
+.primaryBtn {
+  height: 3rem; /* 48px */
+  padding: 0.875rem 1.75rem;
+  border-radius: 0.5rem; /* 8px */
+  background-color: $color-coral;
+  color: $color-white;
+  font-family: $font-family-space-grotesk;
+  font-size: 0.875rem; /* 14px */
+  font-weight: 600;
+  border: none;
+  cursor: pointer;
+  white-space: nowrap;
+  transition: $transition-default;
+
+  &:hover {
+    background-color: $color-black;
+    color: $color-white;
+  }
+}
+
+.secondaryBtn {
+  height: 3rem; /* 48px */
+  padding: 0.875rem 1.75rem;
+  border-radius: 0.5rem; /* 8px */
+  background-color: transparent;
+  color: $color-black;
+  border: 0.0625rem solid $color-black;
+  font-family: $font-family-space-grotesk;
+  font-size: 0.875rem; /* 14px */
+  font-weight: 600;
+  cursor: pointer;
+  white-space: nowrap;
+  transition: $transition-default;
+
+  &:hover {
+    background-color: $color-black;
+    color: $color-white;
+    border-color: $color-black;
+  }
+}
+
+.graphicColumn {
+  position: absolute;
+  right: 3.75rem;
+  top: 50%;
+  transform: translateY(-50%);
+  height: 100%;
+  width: auto;
+  pointer-events: none;
+  z-index: 1;
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  opacity: 0.85;
+
+  @media (min-width: 120rem) {
+    right: 15rem; /* Exactly matches 15rem right padding of Header button */
+  }
+
+  img {
+    height: 100%;
+    width: auto;
+    object-fit: contain;
+    object-position: right center;
+    display: block;
+  }
+
+  @media (max-width: 48rem) {
+    display: none; /* Hide background graphic on mobile to match mockup cleanly */
+  }
+}
