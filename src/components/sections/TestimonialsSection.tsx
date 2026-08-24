@@ -1,23 +1,27 @@
 'use client';
 
 import React from 'react';
+import Image from 'next/image';
 import styles from './TestimonialsSection.module.scss';
 
 export const TestimonialsSection: React.FC = () => {
   const testimonials = [
     {
-      quote:
-        '"Sterling\'s electrical estimates came in exact, no surprises mid-build, no change orders we hadn\'t already planned for. That kind of accuracy is rare, and it\'s why we keep coming back to them."',
-      author: 'David Renfrew',
-      role: 'Development Director, Ashford Bridge',
-    },
-    {
+      avatar: '/clients-30 1.png',
       quote:
         '"We\'ve worked with a lot of estimation firms, but Sterling treats a 20-unit job with the same care as a 200-unit high-rise. That consistency is exactly what we needed on a project with this many moving parts."',
       author: 'Sana Raza',
       role: 'Principal Architect, Raza Architects',
     },
     {
+      avatar: '/clients-29 1.png',
+      quote:
+        '"Sterling\'s electrical estimates came in exact, no surprises mid-build, no change orders we hadn\'t already planned for. That kind of accuracy is rare, and it\'s why we keep coming back to them."',
+      author: 'David Renfrew',
+      role: 'Development Director, Ashford Bridge',
+    },
+    {
+      avatar: '/clients-31 1.png',
       quote:
         '"Sterling understood what our senior housing project needed from day one — precise numbers, yes, but also a real sense of who the building was for. It showed in every part of the estimate."',
       author: 'Marcus Ibe',
@@ -35,7 +39,18 @@ export const TestimonialsSection: React.FC = () => {
         <div className={styles.gridWrapper}>
           {testimonials.map((item) => (
             <div key={item.author} className={styles.card}>
-              <p className={styles.quoteText}>{item.quote}</p>
+              <div>
+                <div className={styles.avatarWrapper}>
+                  <Image
+                    src={item.avatar}
+                    alt={item.author}
+                    width={120}
+                    height={120}
+                  />
+                </div>
+                <p className={styles.quoteText}>{item.quote}</p>
+              </div>
+
               <div className={styles.authorMeta}>
                 <h3 className={styles.authorName}>{item.author}</h3>
                 <p className={styles.authorRole}>{item.role}</p>

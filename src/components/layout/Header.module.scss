@@ -50,13 +50,13 @@
 
   img {
     height: 100%;
-    max-height: 12rem;
+    max-height: 10rem;
     width: auto;
     object-fit: contain; /* Prevents any logo cropping or distortion */
     display: block;
 
     @media (max-width: 48rem) {
-      max-height: 4.5rem;
+      max-height: 8rem;
     }
   }
 }

@@ -237,6 +237,10 @@
   white-space: nowrap;
   transition: $transition-default;
   order: 5;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  text-decoration: none;
 
   &:hover {
     background-color: $color-black;

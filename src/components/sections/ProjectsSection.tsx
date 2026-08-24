@@ -62,10 +62,15 @@ export const ProjectsSection: React.FC = () => {
           living without compromise.
         </p>
 
-        {/* Read More Button */}
-        <button className={styles.readMoreBtn} type="button">
+        {/* Read More Link Button to Figma Prototype */}
+        <a
+          href="https://www.figma.com/proto/WRdSa6LmVkO1F0Zmuv3mNU/Sterling?node-id=259-2&t=B6kn82nuBJ3BgBjc-0&scaling=scale-down-width&content-scaling=fixed&page-id=0%3A1"
+          target="_blank"
+          rel="noopener noreferrer"
+          className={styles.readMoreBtn}
+        >
           READ MORE
-        </button>
+        </a>
       </div>
     </section>
   );
