@@ -3,9 +3,9 @@
 
 .servicesWrapper {
   width: 100%;
-  min-height: calc(100vh - 7rem); /* Full screen viewport height below header */
-  scroll-margin-top: 7rem; /* Offset for fixed sticky header height */
-  background-color: $color-stone;
+  min-height: calc(100vh - 8.75rem); /* Full screen viewport height below header */
+  scroll-margin-top: 8.75rem; /* Offset for fixed sticky header height */
+  background-color:$color-stone;
   padding: 4rem 0;
   box-sizing: border-box;
   display: flex;
@@ -51,7 +51,7 @@
   font-family: $font-family-space-grotesk;
   font-size: 2.75rem; /* 44px */
   font-weight: 700;
-  color: $color-coral;
+  color:$color-coral;
   letter-spacing: -0.01em;
 
   @media (max-width: 48rem) {
@@ -63,7 +63,7 @@
   font-family: $font-family-space-grotesk;
   font-size: 1rem; /* 16px */
   font-weight: 500;
-  color: $color-black-80;
+  color: #555555;
   max-width: 36rem;
   line-height: 1.5;
 
@@ -74,8 +74,8 @@
 
 .gridWrapper {
   width: 100%;
-  border-top: 0.0625rem solid $color-black-60;
-  border-bottom: 0.0625rem solid $color-black-60;
+  border-top: 0.0625rem solid #C8C2B8;
+  border-bottom: 0.0625rem solid #C8C2B8;
   display: grid;
   grid-template-columns: repeat(4, 1fr);
   box-sizing: border-box;
@@ -91,7 +91,7 @@
   display: flex;
   flex-direction: column;
   gap: 1.25rem;
-  border-right: 0.0625rem solid $color-black-60;
+  border-right: 0.0625rem solid #C8C2B8;
   box-sizing: border-box;
   transition: background-color 0.25s ease;
 
@@ -102,7 +102,7 @@
   @media (max-width: 60rem) {
     padding: 2rem 1rem 2.25rem 1rem;
     border-right: none;
-    border-bottom: 0.0625rem solid $color-black-60;
+    border-bottom: 0.0625rem solid #C8C2B8;
   }
 }
 
@@ -118,10 +118,10 @@
   align-items: center;
   justify-content: center;
   font-size: 1.75rem;
-  color: $color-coral;
+  color: #FF5A49;
 
   span, svg {
-    color: $color-coral;
+    color: #FF5A49;
     font-size: 1.75rem;
   }
 }
@@ -130,14 +130,14 @@
   font-family: $font-family-space-grotesk;
   font-size: 0.875rem; /* 14px */
   font-weight: 500;
-  color: $color-black-60;
+  color: #999999;
 }
 
 .cardTitle {
   font-family: $font-family-space-grotesk;
   font-size: 1.25rem; /* 20px */
   font-weight: 700;
-  color: $color-black;
+  color: #111111;
   line-height: 1.3;
   margin-top: 0.5rem;
 }
@@ -146,5 +146,5 @@
   font-family: $font-family-space-grotesk;
   font-size: 0.875rem; /* 14px */
   line-height: 1.65;
-  color: $color-black-80;
+  color: #555555;
 }

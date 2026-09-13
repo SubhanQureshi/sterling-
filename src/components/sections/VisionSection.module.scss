@@ -6,7 +6,6 @@
   min-height: calc(100vh - 7rem); /* Full screen viewport height below header */
   scroll-margin-top: 7rem; /* Offset for fixed sticky header height */
   background-color: $color-paper;
-  border-bottom: 0.0625rem solid $color-black-60; /* Separation line between Vision & Projects */
   padding: 4rem 0;
   box-sizing: border-box;
   display: flex;
@@ -83,7 +82,7 @@
     border-bottom: 0.0625rem solid $color-black-60;
 
     &:last-child {
-      border-bottom-color: $color-black-60;
+      border-bottom: none;
     }
   }
 }

@@ -7,8 +7,9 @@
   background-color: $color-paper;
   border-bottom: 0.0625rem solid $color-black-60;
   position: sticky;
+  position: -webkit-sticky;
   top: 0;
-  z-index: 100;
+  z-index: 1000;
   box-sizing: border-box;
   display: flex;
   justify-content: center;
@@ -16,6 +17,11 @@
 
   @media (max-width: 48rem) {
     height: 5rem; /* 80px on mobile */
+    position: fixed; /* Fixed position on mobile screens for 100% fixed header */
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 1000;
   }
 }
 

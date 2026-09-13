@@ -6,9 +6,9 @@ import styles from './ProjectsSection.module.scss';
 
 export const ProjectsSection: React.FC = () => {
   const stats = [
-    { value: '229 Units', label: 'UNITS' },
-    { value: '19 Floors', label: 'FLOORS' },
-    { value: '204,651 Sq Ft', label: 'SQ FT' },
+    { value: '229', label: 'UNITS' },
+    { value: '19', label: 'FLOORS' },
+    { value: '204,651', label: 'SQ FT' },
     { value: 'Mixed', label: 'SENIOR LIVING + COMMERCIAL' },
   ];
 

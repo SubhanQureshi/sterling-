@@ -15,6 +15,7 @@
   @media (max-width: 48rem) {
     min-height: auto;
     padding: 2rem 0;
+    margin-top: 5rem; /* Account for fixed mobile header height */
   }
 }
 
